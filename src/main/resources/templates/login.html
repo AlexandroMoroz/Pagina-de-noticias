@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="/fragments/head_form_registro :: head">
+</head>
+
+<body class="main">
+    <nav class="navbar navbar-expand-lg navBar">
+        <div class="container-fluid">
+            <div class="contenidoImg">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img class="logo pt-2" src="/img/Egg.png" alt="Img logo egg">
+                </a>
+            </div>
+        </div>
+    </nav>
+ 
+    <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
+        <div class="card-body">
+            <h5 class="card-title">Exito!</h5>
+            <p class="card-text" th:text="${exito}"></p>
+        </div>
+    </div>
+    <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError">
+        <div class="card-body">
+            <h5 class="card-title">Error</h5>
+            <p class="card-text" th:text="${error}"></p>
+        </div>
+    </div>
+
+    <h4 class="d-flex justify-content-center"><span>Ingresá tu usuario</span></h4>
+    <form class="formulario" th:action="@{/login}" method="POST">
+        <div class="form-group my-3">
+            <span class="texto"><label class="form-label texto">Email</label></span>
+            <input type="email" class="form-control" name="email" placeholder="Ingrese su email"
+                th:value="${email}"></input>
+        </div>
+        <div class="form-group my-3">
+            <span class="texto"><label class="form-label texto">Contraseña</label></span>
+            <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña"
+                th:value="${pass}"></input>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3 botones" style="
+        width: -webkit-fill-available;">Ingresar</button>
+    </form>
+
+    <section class=" text-center container">
+        <div class="row mt-3">
+            <div class="divVolver">
+                <a th:href="@{/}" class="btn btn-secondary my-2 botonVolver botones">Volver</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer th:replace="/fragments/footer :: footer">     
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

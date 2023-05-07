@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head th:replace="/fragments/head_index :: head">
+    </head>
+
+    <body class="main">
+        <nav th:replace="/fragments/navbar :: nav">      
+        </nav>
+
+        <header class="header1">                     
+            <section class="contenedorMain">
+                <div class="divError ms-5">
+                    <a class="navbar-brand codigoError" th:text="'Error ' + ${codigo}"></a>
+                    <p class="mensajeError" th:text="${mensaje}"></p>                  
+                </div>
+            </section>
+        </header>
+
+
+        <section class=" text-center container">
+            <div class="row mt-3">
+                <div>
+                    <a th:href="@{/index}" class="btn btn-secondary my-2 botonVolver1 botones">Volver</a>
+                </div>
+            </div>
+        </section>
+        <div th:replace="/fragments/tarjetas :: div">
+        </div>
+
+
+        <footer th:replace="/fragments/footer :: footer">     
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

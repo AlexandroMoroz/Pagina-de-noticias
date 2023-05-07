@@ -1,0 +1,21 @@
+<div class="row row-cols-1 row-cols-md-4 tarjetas px-2">
+    <div class="col-3" th:each="noticia : ${noticias}">
+        <div class="card border-primary mb-3">
+            <a th:href="@{/noticia/mostrar/__${noticia.id}__}" class="mb-4">
+                <div class="card-body">
+                    <h5 class="d-flex justify-content-center card-title text-primary" th:text="${noticia.titulo}">
+                    </h5>
+
+                </div>
+            </a>
+            <div class="d-flex align-items-center botones">
+                <a th:href="@{/noticia/modificar/__${noticia.id}__}"
+                   class="btn btn-primary mx-1 d-flex container-boton" sec:authorize="hasAnyRole('ADMIN','PERIODISTA')"><i
+                        class="fas fa-feather-alt container-boton"></i>>Modificar noticia</a>
+                <a th:href="@{/noticia/eliminar/__${noticia.id}__}"
+                   class="btn btn-primary mx-1 d-flex container-boton" sec:authorize="hasRole('ADMIN')">
+                    Eliminar noticia</a>
+            </div>
+        </div>
+    </div>
+</div>

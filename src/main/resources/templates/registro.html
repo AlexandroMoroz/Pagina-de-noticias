@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="/fragments/head_form_registro :: head">
+</head>
+
+
+    <body class="main">
+        <nav class="navbar navbar-expand-lg navBar">
+            <div class="container-fluid">
+                <div class="contenidoImg">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img class="logo pt-2" src="/img/Egg.png" alt="Img logo egg">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <form class="formulario" th:action="@{/registro}" method="POST">
+            <div class="form-group my-3">
+                <span class="texto"><label class="mb-2">Nombre de usuario</label></span>
+                <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre de usuario"
+                       th:value="${nombre}">
+            </div>
+            <div class="form-group my-3">
+                <span class="texto"><label class="form-label texto">Email</label></span>
+                <input type="email" class="form-control" name="email" placeholder="Ingrese su email"
+                       th:value="${email}"></input>
+            </div>
+            <div class="form-group my-3">
+                <span class="texto"><label class="form-label texto">Contraseña</label></span>
+                <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña"
+                       th:value="${pass}"></input>
+            </div>
+            <div class="form-group my-3">
+                <span class="texto"><label class="form-label texto">Repetir contraseña</label></span>
+                <input type="password" class="form-control" name="pass2" placeholder="Repita su contraseña"
+                       th:value="${pass2}"></input>
+            </div>
+
+            <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
+                <div class="card-body">
+                    <h5 class="card-title">Exito!</h5>
+                    <p class="card-text" th:text="${exito}"></p>
+                </div>
+            </div>
+            <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError">
+                <div class="card-body">
+                    <h5 class="card-title">Error</h5>
+                    <p class="card-text" th:text="${error}"></p>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3 botones" style="
+                    width: -webkit-fill-available;">Registrar</button>
+        </form>
+
+        <section class=" text-center container">
+            <div class="row mt-3">
+                <div class="divVolver">
+                    <a th:href="@{/}" class="btn btn-secondary my-2 botonVolver botones">Volver</a>
+                </div>
+            </div>
+        </section>
+
+        <footer th:replace="/fragments/footer :: footer">     
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

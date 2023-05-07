@@ -1,0 +1,73 @@
+.main {
+    background-image: url(../img/FondoZoom.jpg);
+    background-size: cover;
+
+}
+
+.contenidoImg {
+    width: 20%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.navBar {
+    background-color: #fff !important;
+    height: 50px;
+}
+
+.encabezado strong {
+    color: gold;
+}
+
+.encabezado {
+    font-size: larger;
+    font-weight: 700;
+    height: 8rem;
+}
+.texto1{
+    text-align: center;
+}
+.texto {
+    font-weight: 900;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.mensajeExito {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.mensajeError {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.formulario {
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+}
+
+.botonVolver{
+    width: 50%;
+}
+
+.botonVolver:hover {
+
+    color: black;
+    background-color: goldenrod;
+}
+.info {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.contenidoPie {
+    display: flex;
+    justify-content: center;
+}

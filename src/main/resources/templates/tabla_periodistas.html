@@ -1,0 +1,61 @@
+<html>
+
+<head th:replace="/fragments/head_index :: head">
+</head>
+
+<body class="main">
+
+    <nav th:replace="/fragments/navbar :: nav"></nav>
+
+    <section>
+        <table class="table table-dark mt-3">
+            <thead>
+                <tr class="text-center align-middle">
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Noticias publicadas</th>
+                    <th scope="col">Sueldo mensual</th>
+                    <th scope="col">Actualizar sueldo mensual</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody th:each="periodista : ${periodistas}">
+                <tr class="text-center align-middle">
+                    <th scope="row" th:text="${periodista.id}"></th>
+                    <td th:text="${periodista.email}"></td>
+                    <td th:text="${periodista.rol}"></td>
+                    <td>
+                        <a th:href="@{/noticia/noticias_periodista/__${periodista.id}__}"> Listar noticias </a>
+                    </td>
+                    <td th:text="${periodista.sueldoMensual}"></td>
+                    <td>
+                        <form th:action="@{/periodista/modificar/__${periodista.id}__}">
+                            <input name="sueldoMensual" placeholder="ingrese el sueldo mnsual"></input>
+                            <button type="submit" class="btn btn-primary mt-3 "> Actualizar </button>
+                        </form>
+                    </td>
+                    <td
+                        ><a th:href="@{/periodista/eliminar/__${periodista.id}__}" class="btn btn-primary">Dar de
+                            baja</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+    <section class=" text-center container">
+        <div class="row mt-3">
+            <div class="divVolver text-center container">
+                <a th:href="@{/index}" class="btn btn-secondary my-2 botonVolver1">Volver</a>
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="/fragments/footer :: footer">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="/fragments/head_noticias :: head">  
+</head>
+
+<body class="main">
+    
+   <nav th:replace="/fragments/navbar :: nav">      
+    </nav>
+
+
+    <section class="d-flex p-3 seccion" th:each="noticia : ${noticia}">
+        <div class="d-flex flex-column fondo">
+            <header class="d-flex cabezera">
+                <h1 th:text="${noticia.titulo}"></h1>
+            </header>
+            <div class="d-flex">
+                <pre><p class="d-flex w-60 ps-3 pe-3" th:text="${noticia.cuerpo}"></p></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class=" text-center container">
+        <div class="row mt-3">
+            <div class="divVolver">
+                <a th:href="@{/index}" class="btn btn-secondary my-2 botonVolver botones">Volver</a>
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="/fragments/footer :: footer">     
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

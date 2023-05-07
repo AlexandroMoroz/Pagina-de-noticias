@@ -1,0 +1,80 @@
+
+.main {
+    background-image: url(../img/FondoZoom_1.jpg);
+    background-size: cover;
+    height: 480px;
+}
+
+.contenidoImg {
+    width: 20%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.navBar {
+    background-color: #fff !important;
+    height: 50px;
+}
+
+.elementosNav {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    color: #37474f;
+    font-weight: 700;
+}
+
+.elementos {
+    margin-right: 50px;
+}
+
+.fondo{
+background-color: rgba(255, 255, 255, 0.80);  
+}
+
+.seccion{
+    justify-content: center;
+}
+
+.cabezera{
+    justify-content: center;
+}
+
+.divVolver {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.botonVolver {
+    width: 70%;
+}
+
+.botonVolver:hover {
+    color: black;
+    background-color: goldenrod;
+}
+
+.botones {
+    box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+}
+
+.botones:hover {
+    color: black;
+    background-color: goldenrod;
+}
+
+.botones:active {
+    box-shadow: none;
+}
+
+.contenidoPie {
+  display: flex;
+  justify-content: center;
+}
