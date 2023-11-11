@@ -1,9 +1,5 @@
 # Noticias Egg
-Este proyecto es parte del curso Fullstack Web Developer de EGG Cooperation y tiene como objetivo desarrollar una plataforma de noticias para los usuarios de su plataforma,
-
-Es el primer proyecto full stack y es parte de un ejercicio que teniamos que afrontar sin ayuda por lo que el proyecto es bastante básico y simple a comparación de los
-
-siguientes proyectos.
+Este proyecto es parte del curso Fullstack Web Developer de EGG Cooperation y tiene como objetivo desarrollar una plataforma de noticias para los usuarios de su plataforma, Es el primer proyecto full stack y es parte de un ejercicio que teniamos que afrontar sin ayuda por lo que el proyecto es bastante básico y simple a comparación de los siguientes proyectos.
 
 La aplicación permitirá a los usuarios poder estar al tanto de las nuevas noticias que surjan y mantenerse al tanto de todo.
 
